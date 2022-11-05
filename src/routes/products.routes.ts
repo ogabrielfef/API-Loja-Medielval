@@ -5,6 +5,11 @@ const router = Router();
 
 const productsController = new ProductsController();
 
+router.get(
+  '/',
+  productsController.getProduct.bind(productsController),
+);
+
 router.post(
   '/',
   productsController.createProduct.bind(productsController),
